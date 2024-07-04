@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb toggler</title>
+
+    <style>
+        .app-title{
+            text-align: center;
+        }
+
+        .bulb-image{
+           display: block;
+           margin: 10px auto;
+
+        }
+
+        .btn-container{
+            display: flex;
+            justify-content:center;
+        }
+
+        .btn-toggle{
+            margin:10px 30px;
+            width:100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="app-title"> Bulb Toggler</h1>
+    <img src="sunblank.png"  class="bulb-image" id="img-bulb"/>
+<div clas="btn-container">
+    <button type="button" class=" bulb-toggle btn-1" onclick="sun('light')">Toggle </button>
+    
+    
+</div> 
+
+<script>
+    function sun(action){
+        const sunElement = document.getElementById("img-bulb") 
+     if (sunElement.src.includes("sunblank.png"))
+     {
+         sunElement.src = "sunlight.png"
+    }  
+     
+     else if (sunElement.src.includes("sunlight.png"))
+     {
+          sunElement.src = "sundrklight.png"
+     }
+
+     else if (sunElement.src.includes("sundrklight.png"))
+     {
+       sunElement.src = "moon.png"
+     }
+
+     else {
+        sunElement.src = "sunblank.png"
+     }
+    }
+</script>
+
+</body>
+</html>
